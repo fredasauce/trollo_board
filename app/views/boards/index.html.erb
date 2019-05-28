@@ -10,16 +10,10 @@
           <%= link_to board.board_name, board_path(board), class: "header" %>
         </div>
         <div class="extra content">
-          <div class="ui two buttons">
-            <%= link_to (edit_board_path(board)) do %>
+          <div>
+            <%= link_to (board_path(board)) do %>
               <div class="ui basic green button">
-                Edit
-              </div>
-            <% end %>
-            
-            <%= link_to(board_path(board), method: :delete, data: { confirm: "Are you sure?"}) do %>
-              <div class="ui basic red button"> 
-                Delete
+                View Board
               </div>
             <% end %>
           </div>
