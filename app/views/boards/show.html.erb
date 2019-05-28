@@ -1,2 +1,6 @@
-<h1>Boards#show</h1>
-<p>Find me in app/views/boards/show.html.erb</p>
+<h1><%= @board.board_name %></h1>
+<hr />
+
+<%= link_to "View Lists", board_lists_path(@board), class: "ui green button" %>
+<%= link_to "Edit Board", edit_board_path(@board), class: "ui blue button" %>
+<%= link_to "Delete Board", board_path(@board), method: :delete, class: "ui red button" %>
